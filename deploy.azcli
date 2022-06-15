@@ -1,0 +1,8 @@
+location='switzerlandnorth'
+
+# Create / Update the deployment (replace AAD Group ID)
+az deployment sub create -n "azure-vwan" -l $location -f main.bicep
+
+# Cleanup. Delete the RGS and Deployment
+# az group delete -g $baseline -y
+# az deployment sub delete -n "$baseline"
